@@ -1,4 +1,4 @@
-# ecommmerce_app_flutter_p6
+# ecommerce_app_flutter_p6
 
 A new Flutter project.
 
