@@ -13,12 +13,23 @@ class AppTheme {
   const AppTheme._();
 
   static final lightTheme = ThemeData(
-      brightness: Brightness.light,
-      primaryColor: lightPrimaryColor,
-      visualDensity: VisualDensity.adaptivePlatformDensity,
-      appBarTheme: AppBarTheme(backgroundColor: lightPrimaryColor),
-      textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(foregroundColor: lightBackgroundColor)), colorScheme: ColorScheme.light(secondary: lightSecondaryColor).copyWith(background: lightBackgroundColor)
+    brightness: Brightness.light,
+    primaryColor: lightPrimaryColor,
+    visualDensity: VisualDensity.adaptivePlatformDensity,
+    appBarTheme: AppBarTheme(backgroundColor: lightPrimaryColor),
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(foregroundColor: lightBackgroundColor),
+    ),
+    colorScheme: ColorScheme.light(
+      primary: lightPrimaryColor,
+      secondary: lightSecondaryColor,
+      background: lightBackgroundColor,
+      surface: lightBackgroundColor,
+      onPrimary: Colors.white, // Color del texto en botones primarios
+      onSecondary: Colors.white, // Color del texto en botones secundarios
+      onBackground: lightTextColor, // Color del texto sobre fondo
+      onSurface: Colors.black, // Color del texto sobre superficies
+    ),
   );
 
   static Brightness get currentSystemBrightness =>
